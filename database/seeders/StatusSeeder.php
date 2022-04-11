@@ -7,6 +7,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
+use App\Models\Status;
 
 class StatusSeeder extends Seeder
 {
@@ -17,7 +18,7 @@ class StatusSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('statuses')->insert(
+        Status::insert(
             [
                 'status_cd' => 'RQTD',
                 'status_name' => 'Requested',

@@ -7,6 +7,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
+use App\Models\Service;
 
 
 class ServiceSeeder extends Seeder
@@ -18,7 +19,7 @@ class ServiceSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('services')->insert([
+        Service::insert([
             'service_cd' => 'CONS',
             'service_name' => 'Consultation/Medicine',
         ]);
